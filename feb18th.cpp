@@ -10,22 +10,25 @@ int add(int a, int b, int c){
     return a + b + c;
 }
 
-int largest(int arr[], int size) {
+void largest(int arr[], int size) {
     int large = arr[0];
+    int index = 0;
     for (int i = 1; i <= size; i++) {
         if (arr[i] > large) {
             large = arr[i];
+            index = i;
         }
 
     }
-    return large;
+    cout << "The largest value is " << large << " At index " << index;
+    
 }
 
 
 int main()
 {
     int list[] = { 1,2,5,5,3 };
-    cout << largest(list, SIZE);
+    largest(list, SIZE);
    
     return 0;
 }
