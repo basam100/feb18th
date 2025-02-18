@@ -3,7 +3,7 @@
 
 using namespace std;
 
-const int SIZE = 10;
+const int SIZE = 5;
 
 int add(int a, int b, int c){
 
@@ -11,19 +11,22 @@ int add(int a, int b, int c){
 }
 
 int largest(int arr[], int size) {
-    static int largest = arr[0];
+    int large = arr[0];
     for (int i = 1; i <= size; i++) {
-        if (arr[i] > largest) {
-            largest = arr[i];
+        if (arr[i] > large) {
+            large = arr[i];
         }
 
     }
-    return largest;
+    return large;
 }
 
 
 int main()
 {
-    cout << "Hello World!\n";
+    int list[] = { 1,2,5,5,3 };
+    cout << largest(list, SIZE);
+   
+    return 0;
 }
 
